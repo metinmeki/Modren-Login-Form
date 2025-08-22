@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="form-box active" id="login-form">
-            <form action="">
+            <form action="login_register.php" method="post">
                 <h2>Login</h2>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
@@ -18,7 +18,7 @@
             </form>
         </div>
         <div class="form-box" id="register-form">
-            <form action="">
+            <form action="login_register.php" method="pst">
                 <h2>Register</h2>
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="email" name="email" placeholder="Email" required>
@@ -37,21 +37,3 @@
 </body>
 </html>
 
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['login'])) {
-        // Handle login
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        // Perform login logic here
-    } elseif (isset($_POST['register'])) {
-        // Handle registration
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $role = $_POST['role'];
-        // Perform registration logic here
-    }
-}
-?>
