@@ -36,3 +36,22 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['login'])) {
+        // Handle login
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        // Perform login logic here
+    } elseif (isset($_POST['register'])) {
+        // Handle registration
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $role = $_POST['role'];
+        // Perform registration logic here
+    }
+}
+?>
